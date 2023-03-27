@@ -12,7 +12,6 @@ import lombok.Setter;
 @NoArgsConstructor
 @Entity
 @Table(name = "AlbumTrack")
-
 public class AlbumTrack {
 
     @Id
