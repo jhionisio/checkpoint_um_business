@@ -22,6 +22,8 @@ public class Album {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int album_ID;
 
+    private Track[] track_ID;
+
     private String album_name;
 
     private int album_type;
@@ -30,10 +32,8 @@ public class Album {
 
     private Date album_recorded;
 
-    @Id
     private int artist_ID;
 
-    @Id
     private int record_label_ID;
 
     @ManyToOne

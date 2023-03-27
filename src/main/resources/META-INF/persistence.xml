@@ -7,7 +7,8 @@
                       value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
             <property name="javax.persistence.jdbc.url"
                       value="jdbc:sqlserver://LAPTOP-Q3E68NSF:1433;databaseName=TesteCP;encrypt=false"/>
-            <property name="javax.persistence.jdbc.user" value="LAPTOP-Q3E68NSF/mrjoa"/>
+            <property name="javax.persistence.jdbc.user" value="sa"/>
+            <property name="javax.persistence.jdbc.password" value="140400"/>
             <property name="javax.persistence.query.timeout" value="25"/>
 
             <property name="javax.persistence.schema-generation.database.action"
