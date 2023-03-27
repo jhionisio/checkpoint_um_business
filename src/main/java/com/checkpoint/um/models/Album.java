@@ -30,10 +30,10 @@ public class Album {
 
     private Date album_recorded;
 
-    @Id
+
     private int artist_ID;
 
-    @Id
+
     private int record_label_ID;
 
     @ManyToOne
