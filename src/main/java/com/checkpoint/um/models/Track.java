@@ -41,8 +41,9 @@ public class Track {
     @OneToMany(mappedBy = "Track")
     private List<GenreTrack> GenreTracks;
 
-    @OneToMany(mappedBy = "Track")
-    private List<AlbumTrack> AlbumTracks;
+    @ManyToOne
+    @JoinColumn(name = "track_ID")
+    private AlbumTrack AlbumTracks;
 
     @OneToMany(mappedBy = "Track")
     private List<TrackArtist> TrackArtists;

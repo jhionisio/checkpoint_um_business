@@ -22,8 +22,6 @@ public class Album {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int album_ID;
 
-    private Track[] track_ID;
-
     private String album_name;
 
     private int album_type;
@@ -43,5 +41,9 @@ public class Album {
     @ManyToOne
     @JoinColumn(name = "record_label_ID")
     private RecordLabel RecordLabel;
+
+    @ManyToOne
+    @JoinColumn(name = "album_ID")
+    private AlbumTrack AlbumTracks;
 
 }
