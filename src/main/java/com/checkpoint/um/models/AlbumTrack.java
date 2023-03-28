@@ -1,5 +1,7 @@
 package com.checkpoint.um.models;
 
+import java.util.List;
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -20,12 +22,10 @@ public class AlbumTrack {
     @Id
     private int track_ID;
 
-    @ManyToOne
-    @JoinColumn(name = "album_ID")
-    private Album Album;
+    @OneToMany(mappedBy = "AlbumTrack")
+    private List<Album> Album;
 
-    @ManyToOne
-    @JoinColumn(name = "track_ID")
-    private Track Track;
+    @OneToMany(mappedBy = "AlbumTrack")
+    private List<Track> Tracks;
 
 }

@@ -44,7 +44,4 @@ public class Album {
     @JoinColumn(name = "record_label_ID")
     private RecordLabel RecordLabel;
 
-    @OneToMany(mappedBy = "Album")
-    private List<AlbumTrack> AlbumTracks;
-
 }
