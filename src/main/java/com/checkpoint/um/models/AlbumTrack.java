@@ -16,10 +16,8 @@ import lombok.Setter;
 @Table(name = "AlbumTrack")
 public class AlbumTrack {
 
-    @Id
     private int album_ID;
 
-    @Id
     private int track_ID;
 
     @OneToMany(mappedBy = "AlbumTracks")
