@@ -22,10 +22,10 @@ public class AlbumTrack {
     @Id
     private int track_ID;
 
-    @OneToMany(mappedBy = "AlbumTrack")
+    @OneToMany(mappedBy = "Album")
     private List<Album> Album;
 
-    @OneToMany(mappedBy = "AlbumTrack")
+    @OneToMany(mappedBy = "Track")
     private List<Track> Tracks;
 
 }
