@@ -23,10 +23,8 @@ public class Purchase {
 
     private double time;
 
-    @Id
     private int email;
 
-    @Id
     private int track_ID;
 
     @ManyToOne
