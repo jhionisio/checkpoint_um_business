@@ -1,6 +1,8 @@
 package com.checkpoint.um.models;
 
-import com.checkpoint.um.embedded.ArtistTrackId;
+import java.sql.Date;
+
+import com.checkpoint.um.embedded.EmailTrackId;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -13,11 +15,17 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "TrackArtist")
+@Table(name = "Purchase")
 
-public class TrackArtist {
+public class Purchase {
+
+    private int payment_method;
+
+    private Date date;
+
+    private double time;
 
     @EmbeddedId
-    private ArtistTrackId artistTrackId;
+    private EmailTrackId emailTrackId;
 
 }
