@@ -25,7 +25,8 @@ public class RecordLabel {
 
     private String website;
 
-    @OneToMany(mappedBy = "RecordLabel")
-    private List<Album> Albums;
+    @ManyToOne
+    @JoinColumn(name = "record_label_ID")
+    private Album Albums;
 
 }

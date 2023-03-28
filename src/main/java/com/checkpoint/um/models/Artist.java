@@ -25,8 +25,9 @@ public class Artist {
 
     private int artist_type;
 
-    @OneToMany(mappedBy = "Artist")
-    private List<Album> Albums;
+    @ManyToOne
+    @JoinColumn(name = "artist_ID")
+    private Album Albums;
 
     @OneToMany(mappedBy = "Artist")
     private List<TrackArtist> TrackArtists;
