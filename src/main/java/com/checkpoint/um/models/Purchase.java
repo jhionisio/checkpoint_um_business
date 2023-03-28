@@ -2,6 +2,8 @@ package com.checkpoint.um.models;
 
 import java.sql.Date;
 
+import com.checkpoint.um.embedded.EmailTrackId;
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -23,11 +25,8 @@ public class Purchase {
 
     private double time;
 
-    @Id
-    private String email;
-
-    @Id
-    private int track_ID;
+    @EmbeddedId
+    private EmailTrackId emailTrackId;
 
     @ManyToOne
     @JoinColumn(name = "email")

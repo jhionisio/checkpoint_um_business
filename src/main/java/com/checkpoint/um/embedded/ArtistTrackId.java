@@ -5,7 +5,7 @@ import java.io.Serializable;
 import jakarta.persistence.Embeddable;
 
 @Embeddable
-public class AlbumTrackId implements Serializable {
-    private int album_ID;
+public class ArtistTrackId implements Serializable {
+    private int artist_ID;
     private int track_ID;
 }

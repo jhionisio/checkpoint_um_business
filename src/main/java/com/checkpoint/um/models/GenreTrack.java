@@ -1,5 +1,7 @@
 package com.checkpoint.um.models;
 
+import com.checkpoint.um.embedded.GenreTrackId;
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -15,11 +17,8 @@ import lombok.Setter;
 
 public class GenreTrack {
 
-    @Id
-    private int genre_ID;
-
-    @Id
-    private int track_ID;
+    @EmbeddedId
+    private GenreTrackId genreTrackId;
 
     @ManyToOne
     @JoinColumn(name = "genre_ID")
