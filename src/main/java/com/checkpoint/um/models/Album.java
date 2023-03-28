@@ -44,6 +44,6 @@ public class Album {
 
     @ManyToOne
     @JoinColumn(name = "album_ID")
-    private AlbumTrack AlbumTracks;
+    private AlbumTrack albumTrackId;
 
 }

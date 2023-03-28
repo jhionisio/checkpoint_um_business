@@ -21,10 +21,4 @@ public class AlbumTrack {
     @EmbeddedId
     private AlbumTrackId albumTrackId;
 
-    @OneToMany(mappedBy = "AlbumTracks")
-    private List<Album> Album;
-
-    @OneToMany(mappedBy = "AlbumTracks")
-    private List<Track> Tracks;
-
 }
