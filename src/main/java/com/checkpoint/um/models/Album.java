@@ -42,8 +42,11 @@ public class Album {
     @JoinColumn(name = "record_label_ID")
     private RecordLabel RecordLabel;
 
-    @ManyToOne
-    @JoinColumn(name = "albumTrackId")
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumns(value = {
+            @JoinColumn(name = "album_ID", referencedColumnName = "album_ID"),
+            @JoinColumn(name = "track_ID", referencedColumnName = "track_ID")
+    })
     private AlbumTrack albumTrackId;
 
 }
