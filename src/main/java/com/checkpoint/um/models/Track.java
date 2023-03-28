@@ -41,9 +41,12 @@ public class Track {
     @OneToMany(mappedBy = "Track")
     private List<GenreTrack> GenreTracks;
 
-    @ManyToOne
-    @JoinColumn(name = "track_ID")
-    private AlbumTrack AlbumTracks;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumns(value = {
+            @JoinColumn(name = "album_ID", referencedColumnName = "album_ID"),
+            @JoinColumn(name = "track_ID", referencedColumnName = "track_ID")
+    })
+    private AlbumTrack albumTrackId;
 
     @OneToMany(mappedBy = "Track")
     private List<TrackArtist> TrackArtists;
