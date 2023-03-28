@@ -34,19 +34,13 @@ public class Album {
 
     private int record_label_ID;
 
-    // @ManyToOne
-    // @JoinColumn(name = "artist_ID")
-    // private Artist Artist;
+    @ManyToOne
+    @JoinColumn(name = "artist_ID")
+    private Artist Artist;
 
-    @OneToMany(mappedBy = "Albums")
-    private List<Artist> Artist;
-
-    // @ManyToOne
-    // @JoinColumn(name = "record_label_ID")
-    // private RecordLabel RecordLabel;
-
-    @OneToMany(mappedBy = "Albums")
-    private List<RecordLabel> RecordLabel;
+    @ManyToOne
+    @JoinColumn(name = "record_label_ID")
+    private RecordLabel RecordLabel;
 
     @ManyToOne
     @JoinColumn(name = "album_ID")
