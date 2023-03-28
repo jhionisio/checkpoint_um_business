@@ -43,7 +43,7 @@ public class Album {
     private RecordLabel RecordLabel;
 
     @ManyToOne
-    @JoinColumn(name = "album_ID")
+    @JoinColumn(name = "albumTrackId")
     private AlbumTrack albumTrackId;
 
 }
