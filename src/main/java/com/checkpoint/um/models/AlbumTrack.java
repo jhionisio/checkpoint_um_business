@@ -2,6 +2,8 @@ package com.checkpoint.um.models;
 
 import java.util.List;
 
+import com.checkpoint.um.embedded.AlbumTrackId;
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -16,9 +18,8 @@ import lombok.Setter;
 @Table(name = "AlbumTrack")
 public class AlbumTrack {
 
-    private int album_ID;
-
-    private int track_ID;
+    @EmbeddedId
+    private AlbumTrackId albumTrackId;
 
     @OneToMany(mappedBy = "AlbumTracks")
     private List<Album> Album;
