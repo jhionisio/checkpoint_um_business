@@ -34,4 +34,20 @@ public class Album {
 
     private int record_label_ID;
 
+    @ManyToOne
+    @JoinColumn(name = "artist_ID")
+    private Artist Artist;
+
+    @ManyToOne
+    @JoinColumn(name = "record_label_ID")
+    private RecordLabel RecordLabel;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumns(value = {
+            @JoinColumn(name = "album_ID", referencedColumnName = "album_ID"),
+            @JoinColumn(name = "track_ID", referencedColumnName = "track_ID")
+    })
+    @Column(insertable = false, updatable = false)
+    private AlbumTrack AlbumTracks;
+
 }

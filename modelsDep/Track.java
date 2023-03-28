@@ -38,4 +38,20 @@ public class Track {
 
     private Date track_released;
 
+    @OneToMany(mappedBy = "Track")
+    private List<GenreTrack> GenreTracks;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumns(value = {
+            @JoinColumn(name = "album_ID", referencedColumnName = "album_ID"),
+            @JoinColumn(name = "track_ID", referencedColumnName = "track_ID")
+    })
+    private AlbumTrack AlbumTracks;
+
+    @OneToMany(mappedBy = "Track")
+    private List<TrackArtist> TrackArtists;
+
+    @OneToMany(mappedBy = "Track")
+    private List<Purchase> Purchases;
+
 }

@@ -13,16 +13,17 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "RecordLabel")
+@Table(name = "Genre")
 
-public class RecordLabel {
+public class Genre {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int record_label_ID;
+    private int genre_ID;
 
-    private String record_label_name;
+    private String genre_name;
 
-    private String website;
+    @OneToMany(mappedBy = "Genre")
+    private List<GenreTrack> GenreTracks;
 
 }

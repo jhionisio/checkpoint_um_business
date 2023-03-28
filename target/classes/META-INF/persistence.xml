@@ -4,9 +4,9 @@
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
-            <property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://DESKTOP-NOJVSI9:1433;databaseName=JpaExample;encrypt=false"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://LAPTOP-Q3E68NSF\SQL:1433;databaseName=TesteCP;encrypt=false"/>
             <property name="javax.persistence.jdbc.user" value="sa"/>
-            <property name="javax.persistence.jdbc.password" value="sa"/>
+            <property name="javax.persistence.jdbc.password" value="140400"/>
             <property name="hibernate.dialect" value="org.hibernate.dialect.SQLServerDialect"/>
             <property name="javax.persistence.schema-generation.database.action"
                       value="drop-and-create"/>

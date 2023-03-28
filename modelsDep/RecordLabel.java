@@ -25,4 +25,7 @@ public class RecordLabel {
 
     private String website;
 
+    @OneToMany(mappedBy = "RecordLabel")
+    private List<Album> Albums;
+
 }

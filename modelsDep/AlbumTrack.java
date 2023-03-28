@@ -22,9 +22,11 @@ public class AlbumTrack {
     private AlbumTrackId albumTrackId;
 
     @OneToMany(mappedBy = "AlbumTracks")
+    @JoinColumn
     private List<Album> Album;
 
     @OneToMany(mappedBy = "AlbumTracks")
+    @JoinColumn
     private List<Track> Tracks;
 
 }
