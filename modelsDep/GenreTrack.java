@@ -1,7 +1,5 @@
 package com.checkpoint.um.models;
 
-import java.util.List;
-
 import com.checkpoint.um.embedded.GenreTrackId;
 
 import jakarta.persistence.*;
@@ -21,5 +19,13 @@ public class GenreTrack {
 
     @EmbeddedId
     private GenreTrackId genreTrackId;
+
+    @ManyToOne
+    @JoinColumn(name = "genre_ID")
+    private Genre Genre;
+
+    @ManyToOne
+    @JoinColumn(name = "track_ID")
+    private Track Track;
 
 }

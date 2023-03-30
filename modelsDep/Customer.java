@@ -32,4 +32,7 @@ public class Customer {
 
     private String device;
 
+    @OneToMany(mappedBy = "Customer")
+    private List<Purchase> Purchases;
+
 }

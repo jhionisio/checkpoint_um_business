@@ -23,7 +23,4 @@ public class Genre {
 
     private String genre_name;
 
-    @OneToMany(mappedBy = "Genre")
-    private List<GenreTrack> GenreTracks;
-
 }

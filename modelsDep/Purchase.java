@@ -15,7 +15,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "Purchase")
+@Table(name = "Album")
 
 public class Purchase {
 
@@ -27,5 +27,13 @@ public class Purchase {
 
     @EmbeddedId
     private EmailTrackId emailTrackId;
+
+    @ManyToOne
+    @JoinColumn(name = "email")
+    private Customer Customer;
+
+    @ManyToOne
+    @JoinColumn(name = "track_ID")
+    private Track Track;
 
 }
